@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+    background-color: rgba(0, 0, 0, 0.308);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+      background-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%), url(img/polar_ice_caps.jpeg);
+  background-position:center;
+  background-size: cover;
+}
+
+.itinerary-container {
+    background-color: #252323;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.61);
+    max-width: 600px;
+    width: 90%;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+   
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.duration, .price {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.day {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 4px solid #C18061;
+    border-right: 4px solid #C18061;
+    background-color: #424242;
+    border-radius: 4px;
+}
+.day:hover{
+transition: 1s all;
+}
+
+.day h2 {
+    font-size: 1.5rem;
+    color: #C18061;
+    margin-bottom: 5px;
+}
+
+.day p {
+    font-size: 1rem;
+    color: #ffffff;
+}

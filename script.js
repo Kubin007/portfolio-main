@@ -1,80 +1,56 @@
-/* Please ❤ this if you like it! */
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
 
-(function($) { "use strict";
-		
-	//Page cursors
+gsap.from(".nadpis", { opacity: 0, duration: 2, ease: "power1.inOut" });
 
-    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
-        t.style.left = n.clientX + "px", 
-		t.style.top = n.clientY + "px", 
-		e.style.left = n.clientX + "px", 
-		e.style.top = n.clientY + "px", 
-		i.style.left = n.clientX + "px", 
-		i.style.top = n.clientY + "px"
-    });
-    var t = document.getElementById("cursor"),
-        e = document.getElementById("cursor2"),
-        i = document.getElementById("cursor3");
-    function n(t) {
-        e.classList.add("hover"), i.classList.add("hover")
-    }
-    function s(t) {
-        e.classList.remove("hover"), i.classList.remove("hover")
-    }
-    s();
-    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
-        o(r[a])
-    }
-    function o(t) {
-        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
-    }
-	
-	//Navigation
+gsap.from(".podnadpis", { opacity: 0, duration:5, ease: "sine.in", });
 
-	var app = function () {
-		var body = undefined;
-		var menu = undefined;
-		var menuItems = undefined;
-		var init = function init() {
-			body = document.querySelector('body');
-			menu = document.querySelector('.menu-icon');
-			menuItems = document.querySelectorAll('.nav__list-item');
-			applyListeners();
-		};
-		var applyListeners = function applyListeners() {
-			menu.addEventListener('click', function () {
-				return toggleClass(body, 'nav-active');
-			});
-		};
-		var toggleClass = function toggleClass(element, stringClass) {
-			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
-		};
-		init();
-	}();
+console.clear();
 
-	
-	//Switch light/dark
-	
-	$("#switch").on('click', function () {
-		if ($("body").hasClass("light")) {
-			$("body").removeClass("light");
-			$("#switch").removeClass("switched");
-		}
-		else {
-			$("body").addClass("light");
-			$("#switch").addClass("switched");
-		}
-	});          
-              
-})(jQuery);
+const rightColumn = document.querySelector(".right-container");
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".center",
+    markers:false,
+    start: "0 0",
+    end: "+=2000",
+    pin: true,
+    scrub: true
+  }
+});
 
+tl.to(rightColumn, {
+  y: window.innerHeight - rightColumn.scrollHeight,
+  ease: "none"
+});
 
-const myText = new SplitType('#my-text')
+gsap.from(".title-trips", {
+  opacity: 0,
+  x: -100,
+  duration: 20,
+  ease: "expo.out",
 
-        gsap.to('.char', {
-            y: 0,
-            stagger: 0.05,
-            delay: 0.2,
-            duration: .1
-        })
+  scrollTrigger: {
+      trigger: ".title-trips",
+      start: "left 50%",
+      end: "top 30%",
+      scrub: 1,
+      markers: false
+  }
+});
+gsap.from(".trips-box", {
+  scrollTrigger: {
+    trigger: ".trips-box",
+    start: "top 90%",
+    toggleActions: "play none none reverse"
+  },
+  x: -100,
+  opacity: 0,
+  duration: 0.5,
+  ease: "power2.in"
+});
+

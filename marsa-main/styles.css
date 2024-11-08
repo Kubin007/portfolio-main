@@ -1,0 +1,738 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rajdhani", sans-serif;
+}
+body{
+    background-color: black;
+    color: whitesmoke;
+    text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+   height: 100vh;
+}
+header {
+    background: rgba(0, 0, 0, 0.7); 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 0;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .logo img {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.5s ease-in-out;
+   
+  }
+  
+  .nav-links li a:hover {
+    color: #d1b292;
+ transition: .5s all;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+  }
+  
+  @media screen and (max-width: 1500px) {
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      background: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s ease;
+      
+    }
+    .nav-links a{
+      border-bottom: 3px solid #d1b29217;
+      border-radius: 4px;
+    }
+    .nav-links a:hover{
+      border-bottom: 3px solid #d1b292;
+      transition: .5s all;
+    }
+
+  
+    .nav-links.show {
+      left: 0;
+    }
+  
+    .hamburger {
+      display: flex;
+      margin-right: 10px;
+    }
+  }
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.hero-container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+
+
+}
+.hero-container h1{
+  font-size: 250px;
+  -webkit-text-stroke: 5px rgb(255, 255, 255); 
+
+ color: transparent;            
+ 
+ 
+
+}
+.podnadpis{
+  font-size: 40px;
+  color: white;
+  font-weight:lighter;
+}
+
+@media (max-width: 1200px) {
+  .hero-container h1 {
+    font-size: 200px;
+    
+  }
+  .podnadpis {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container h1 {
+    font-size: 150px;
+    
+  }
+  .podnadpis {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container h1 {
+    font-size: 120px;
+   
+  }
+  .podnadpis {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-container h1 {
+    font-size: 100px; 
+    
+    -webkit-text-stroke: 3px rgb(255, 255, 255); 
+  }
+  .podnadpis {
+    font-size: 35px;
+  }
+}
+
+
+
+
+
+.top,
+.center,
+.bottom {
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-container h1 {
+  color: #D8C2A0;
+  font-size: 100px;
+}
+.left-container h2 {
+  color:white;
+  text-align: center;
+  font-weight: lighter;
+ 
+}
+.left-container{
+  background-image: url(img/mars-colony-artist-impression-public-domain\ \(1\).jpg);
+background-size: cover;
+}
+
+.center {
+  background-color: rgb(0, 0, 0);
+}
+
+
+.center-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 100%;
+
+}
+
+
+
+.left-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 100%;
+  gap: 20px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.right {
+  padding: 2rem;
+  position: relative;
+}
+
+.right-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.card {
+
+  height: 189px;
+  max-height: 189px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: .5s all ease-in-out;
+  
+}
+.card:hover{
+  transition: .5s all ease-in-out;
+  transform: scale(1.05);
+}
+.card{
+  background-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%), url(img/olympus.png);
+  background-position:center;
+  background-size: cover;
+
+}
+.card:nth-child(2){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.466) 0%, rgb(15, 14, 14) 100%),
+  url(img/valles.png);
+}
+.card:nth-child(3){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%),
+  url(img/gale\ crater.png)
+}
+.card:nth-child(4){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%),
+  url(img/hellas\ planitia.png)
+}
+.card:nth-child(5){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%),
+  url(img/noctis_lab.jpeg)
+}
+.card:nth-child(6){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%),
+  url(img/meridiani_planum.png)
+}
+.card:nth-child(7){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%),
+  url(img/tharsia.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.card:nth-child(8){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%),
+  url(img/arsia_mons.jpeg)
+}
+.card:nth-child(9){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.199) 0%, rgb(15, 14, 14) 100%),
+  url(img/polar_ice_caps.jpeg)
+}
+
+@media (max-width: 1200px) {
+  .card h1{
+ text-align: center;
+ font-weight: lighter;
+ font-size:25px;
+  }
+  .left-container h1{
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .card h1{
+    text-align: center;
+    font-weight: lighter;
+    font-size:25px;
+     }
+     .left-container h1{
+      font-size: 40px;
+      text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+  .card h1{
+    text-align: center;
+    font-weight: lighter;
+    font-size:25px;
+     }
+     .left-container h1{
+      font-size: 35px;
+      text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+  .card h1{
+    text-align: center;
+    font-weight: lighter;
+    font-size:25px;
+     }
+     .left-container h1{
+      font-size: 35px;
+      text-align: center;
+    }
+
+}
+
+
+.trips{
+  width: 100%;
+  height: 100vh;
+  padding: 0 300px;
+  margin-top:200px;
+
+  align-items: center;
+}
+.title-trips{
+  font-size: 100px;
+  color: #D8C2A0;
+ margin-bottom: 20px;
+}
+.trips .trips-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px,2fr));
+height: 250px;
+gap: 15px;
+}
+.trips .trips-container .trips-box{
+
+border-radius: 8px;
+text-align: center;
+padding: 30px 20px;
+transition: .5s all ease-in-out;
+
+}
+.trips-box{
+  background-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0.39)0%, rgb(15, 14, 14) 100%), url(img/mars_exped.jpg);
+  background-position:center;
+  background-size: cover;
+}
+
+.trips-box:nth-child(2){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.39)0%, rgb(15, 14, 14) 100%),
+  url(img/redpl.jpg);
+  
+}
+.trips-box:nth-child(3){
+  background-image: linear-gradient(to bottom,  rgba(0, 0, 0, 0.39) 0%, rgb(15, 14, 14) 100%),
+  url(img/frontiers.jpg)
+}
+.trips-text h1 p h3{
+  margin-top: 20px;
+}
+.trips-text h1{
+font-size: 40px;
+
+
+}
+.trips-text h3{
+  font-size: 40px;
+  font-weight: 600;
+  color: #D1B092;
+}
+.trips-text p a{
+  font-size:25px;
+  transition: .5s all;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.trips-text p:hover{
+  color: #D1B092;
+}
+.trips-text h1 p{
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .trips {
+      padding: 0 20px;
+      height: 200px;
+      margin-top: 100px;
+  }
+
+  .title-trips {
+      font-size: 80px;
+      padding: 0;
+  }
+
+  .trips .trips-container {
+      grid-template-columns:  1fr;
+  }
+
+  .trips .trips-container .trips-box {
+      padding: 0 100px; 
+   
+  }
+
+ 
+}
+
+
+.equipment{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 0 100px;
+  
+}
+.equipment-container{
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ flex-direction: column;
+  
+}
+
+.vehicle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.vehicle img{
+  width:450px;
+}
+.vehicle-text{
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+ background: rgb(10, 10, 10);
+ border-radius: 8px;
+ padding: 0 20px 5px;
+ box-shadow: 0 4px 8px #d1b29234;
+ transition: .5s all;
+ border-left: 4px double #D1B092;
+}
+.vehicle-text:hover{
+  transition: .5s all;
+  box-shadow: 0 4px 8px #d1b19298;
+}
+.vehicle-text h1{
+  font-size: 80px;
+ color:  #D1B092;
+}
+.vehicle-text p{
+  font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+  .equipment {
+    padding: 0 50px;
+  }
+  .vehicle img {
+    width: 350px;
+  }
+  .vehicle-text h1 {
+    font-size: 60px;
+  }
+  .vehicle-text p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .equipment {
+    padding: 0 20px;
+    height: 350vh;
+    margin-top: 80px;
+  }
+  .vehicle {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .vehicle img {
+    width: 80%;
+  }
+  .vehicle-text h1 {
+    font-size: 40px;
+  }
+  .vehicle-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .equipment{
+    height:450vh;
+    margin-top: 100px;
+  }
+  .vehicle img {
+    width: 100%;
+   
+  }
+  .vehicle-text h1 {
+    font-size: 30px;
+  }
+  .vehicle-text p {
+    font-size: 16px;
+  }
+}
+.booking{
+  width: 100%;
+  height: 100vh;
+  margin-top: 150px;
+
+  padding: 20px 10%;
+  background-image:linear-gradient(to bottom,  rgba(0, 0, 0, 0.363)0%, rgb(15, 14, 14) 100%) ;
+  background-size: cover;
+  background-position: center;
+}
+.booking-title{
+  font-size: 50px;
+  color: #D8C2A0;
+ margin-bottom: 20px;
+}
+.booking-container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+padding: 0 100px;
+ 
+}
+.info-box{
+  background: rgba(0, 0, 0, 0.329);
+  flex-direction: column;
+  padding: 10px 10px 50px;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.info-box h1{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+.info-box h2{
+  font-size: 30px;
+  color: rgb(190, 190, 190);
+}
+.info-box p{
+  font-size: 20px;
+}
+.form-box{
+  background: rgba(0, 0, 0, 0.85);
+}
+.form-box {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(0, 0, 0, 0.8); 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+}
+
+.form-box h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #D1B092; }
+
+.form-box label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffdedb; 
+  text-align: left;
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form-box input[type="text"],
+.form-box input[type="date"],
+.form-box input[type="email"],
+.form-box input[type="tel"],
+.form-box select {
+  background: rgba(255, 255, 255, 0.2);
+  color: #000000;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #D1B092; 
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-box button:hover {
+  background-color: #D1B092; 
+}
+@media (max-width: 768px) {
+  .booking-container {
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .booking-title {
+      font-size: 40px;
+      text-align: center;
+  }
+
+  .info-box, .form-box {
+      width: 100%;
+      max-width: none;
+  }
+
+  .info-box h1 {
+      font-size: 36px;
+  }
+
+  .info-box h2 {
+      font-size: 24px;
+  }
+
+  .info-box p {
+      font-size: 18px;
+  }
+
+  .form-box h1 {
+      font-size: 20px;
+  }
+
+  .form-box label,
+  .form-box input,
+  .form-box select,
+  .form-box button {
+      font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .booking-title {
+      font-size: 32px;
+      margin-bottom: 16px;
+  }
+
+  .info-box h1 {
+      font-size: 28px;
+  }
+
+  .info-box h2 {
+      font-size: 20px;
+  }
+
+  .info-box p,
+  .form-box label {
+      font-size: 17px;
+  }
+
+  .form-box h1 {
+      font-size: 17px;
+  }
+
+  .form-box input,
+  .form-box select,
+  .form-box button {
+      font-size: 12px;
+      padding: 8px;
+  }
+}
