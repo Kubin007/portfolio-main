@@ -179,3 +179,100 @@ header {
     font-size: 20px;
   }
 }
+
+
+
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  text-decoration: none;
+  font-family: poppins,sans-serif;
+}
+
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/*****about section ****/
+.about{
+  background-color: #111;
+  max-width: 800px;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  border-style: solid;
+}
+.about h1{
+  color:#f2f2f2;
+  margin-bottom: 1.1rem;
+  position: relative;
+  display: inline-block;
+  font-size: 3.5rem;
+}
+.about h1::after{
+  position: absolute;
+  content: "";
+  top:50%;
+  right:-50%;
+  width:45%;
+  height: 3px;
+}
+.about h2{
+  color:#f2f2f2;
+  font-size: 2rem;
+  margin:0.5rem 0;
+}
+.about p{
+  color:#fffcfc;
+  margin:1.5rem 0;
+}
+.about .work{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+.work .workbox{
+  display: flex;
+  justify-content: space-between;
+  border-radius:8px;
+  border:1px solid #333;
+  padding: 1rem;
+  margin:1rem;
+
+}
+.work .workbox .desc{
+  width:75%;
+  color:#555;
+}
+.work .workbox .desc h3{
+  color:#f2f2f2;
+  margin-bottom: 3px;
+}
+.work .workbox .desc p{
+  margin:0px;
+}
+/***Responsive Design ***/
+@media(max-width:768px)
+{
+  .about{
+      width: 1005;
+      max-width: 400px;
+      padding:1rem;
+      margin:1rem;
+
+  }
+  .about h1{
+      font-size: 2.2rem;
+  }
+  .about .work{
+      grid-template-columns: repeat(1,1fr);
+      grid-template-rows: repeat(4,auto);
+  }
+}
