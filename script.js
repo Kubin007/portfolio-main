@@ -1,4 +1,4 @@
- const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const about = document.querySelector('.about');
 
@@ -18,29 +18,29 @@ gsap.from(".omne", {
   ease: "power1.inOut",
   scrollTrigger: {
     trigger: ".omne", // Element, který spouští animaci
-    start: "top 50%", // Kdy animace začne (pozice prvku a viewportu)
+    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
     toggleActions: "play none none none" // Akce při scrollování
   }
 });
 
 gsap.from(".ja1", {
   opacity: 0,
-  duration: 2,
+  duration: 5,
   ease: "sine.in",
   scrollTrigger: {
     trigger: ".ja1",
-    start: "top 50%",
+    start: "top 80%",
     toggleActions: "play none none none"
   }
 });
 
 gsap.from(".ja2", {
   opacity: 0,
-  duration: 2,
+  duration: 6,
   ease: "sine.in",
   scrollTrigger: {
     trigger: ".ja2",
-    start: "top 50%",
+    start: "top 80%",
     toggleActions: "play none none none"
   }
 });
@@ -56,7 +56,7 @@ gsap.from(".praxe", {
   ease: "power1.out",
   scrollTrigger: {
     trigger: ".praxe", // Spustí animaci, když se "praxe" objeví ve viewportu
-    start: "top 50%",
+    start: "top 80%",
   }
 });
 
@@ -68,7 +68,7 @@ gsap.from(".workbox:nth-child(1)", {
   ease: "power1.out",
   scrollTrigger: {
     trigger: ".workbox:nth-child(1)",
-    start: "top 50%",
+    start: "top 80%",
   }
 });
 
@@ -79,7 +79,7 @@ gsap.from(".workbox:nth-child(2)", {
   ease: "power1.out",
   scrollTrigger: {
     trigger: ".workbox:nth-child(2)",
-    start: "top 50%",
+    start: "top 80%",
   }
 });
 
@@ -90,7 +90,7 @@ gsap.from(".workbox:nth-child(3)", {
   ease: "power1.out",
   scrollTrigger: {
     trigger: ".workbox:nth-child(3)",
-    start: "top 50%",
+    start: "top 80%",
   }
 });
 
@@ -101,7 +101,7 @@ gsap.from(".workbox:nth-child(4)", {
   ease: "power1.out",
   scrollTrigger: {
     trigger: ".workbox:nth-child(4)",
-    start: "top 50%",
+    start: "top 80%",
   }
 });
 
