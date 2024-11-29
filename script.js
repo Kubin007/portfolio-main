@@ -25,7 +25,7 @@ gsap.from(".omne", {
 
 gsap.from(".ja1", {
   opacity: 0,
-  duration: 3,
+  duration: 2,
   ease: "sine.in",
   scrollTrigger: {
     trigger: ".ja1",
@@ -36,7 +36,7 @@ gsap.from(".ja1", {
 
 gsap.from(".ja2", {
   opacity: 0,
-  duration: 4,
+  duration: 2,
   ease: "sine.in",
   scrollTrigger: {
     trigger: ".ja2",
