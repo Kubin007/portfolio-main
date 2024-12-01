@@ -107,14 +107,14 @@ gsap.from(".workbox:nth-child(4)", {
 
 
 gsap.from(".socials a", {
-  y: 50, // Start 50px pod svou původní pozicí
-  opacity: 0, // Start s nulovou průhledností
-  duration: 1, // Délka animace
-  stagger: 0.2, // Animace obrázků s malým zpožděním mezi nimi
-  ease: "power3.out", // Typ zrychlení
+  y: 50, 
+  opacity: 0, 
+  duration: 1,
+  stagger: 0.2,
+  ease: "power3.out", 
   scrollTrigger: {
-    trigger: ".about", // Sekce, při jejímž dosažení animace začne
-    start: "top center", // Spustí se, když vrchní okraj sekce dorazí do středu okna
+    trigger: ".about", 
+    start: "top 80%", 
   }
 });
 
