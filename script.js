@@ -105,15 +105,24 @@ gsap.from(".workbox:nth-child(4)", {
   }
 });
 
+gsap.from(".kontakt", {
+  opacity: 0,
+  duration: 2,
+  ease: "power1.inOut",
+  scrollTrigger: {
+    trigger: ".kontakt", // Element, který spouští animaci
+    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
+    toggleActions: "play none none none" // Akce při scrollování
+  }
+});
 
 gsap.from(".socials a", {
   y: 50, 
   opacity: 0, 
   duration: 1,
-  stagger: 0.2,
-  ease: "power3.out", 
+  ease: "power1.out", 
   scrollTrigger: {
-    trigger: ".about", 
+    trigger: ".socials", 
     start: "top 80%", 
   }
 });
