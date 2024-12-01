@@ -25,7 +25,7 @@ gsap.from(".omne", {
 
 gsap.from(".ja1", {
   opacity: 0,
-  duration: 5,
+  duration: 2,
   ease: "sine.in",
   scrollTrigger: {
     trigger: ".ja1",
@@ -36,7 +36,7 @@ gsap.from(".ja1", {
 
 gsap.from(".ja2", {
   opacity: 0,
-  duration: 6,
+  duration: 2,
   ease: "sine.in",
   scrollTrigger: {
     trigger: ".ja2",
@@ -106,6 +106,30 @@ gsap.from(".workbox:nth-child(4)", {
 });
 
 
+gsap.from(".socials a", {
+  y: 50, // Start 50px pod svou původní pozicí
+  opacity: 0, // Start s nulovou průhledností
+  duration: 1, // Délka animace
+  stagger: 0.2, // Animace obrázků s malým zpožděním mezi nimi
+  ease: "power3.out", // Typ zrychlení
+  scrollTrigger: {
+    trigger: ".about", // Sekce, při jejímž dosažení animace začne
+    start: "top center", // Spustí se, když vrchní okraj sekce dorazí do středu okna
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 console.clear();
 
@@ -125,6 +149,7 @@ tl.to(rightColumn, {
   y: window.innerHeight - rightColumn.scrollHeight,
   ease: "none"
 });
+
 
 gsap.from(".title-trips", {
   opacity: 0,
