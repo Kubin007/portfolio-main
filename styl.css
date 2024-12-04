@@ -375,3 +375,66 @@ footer ul li a {
   font-size: 300;
   margin: 2rem;
 }
+
+.projekty {
+  background-color: #111;
+  max-width: 1000px;
+  padding: 2rem;
+  border-radius: 10px;
+  border-style: solid;
+  margin: 50px auto; /* Centrovat na stránce */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projekty h1 {
+  color: #f2f2f2;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.projekty .prace {
+  display: flex;
+  justify-content: space-between; /* Rovnoměrné rozmístění boxů */
+  flex-wrap: nowrap; /* Boxy nezabalit na větších obrazovkách */
+  gap: 1rem; /* Mezera mezi boxy */
+  width: 100%;
+  overflow-x: auto; /* Zajistí posun, pokud nebude dost místa */
+}
+
+.prace .pracebox {
+  flex: 1 1 30%; /* Všechny boxy budou stejně široké */
+  max-width: 30%;
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 1rem;
+  background-color: #1b1b1b;
+  text-align: center;
+  box-sizing: border-box; /* Zahrnout padding do šířky */
+}
+
+.prace .pracebox .popis h3 {
+  color: #f2f2f2;
+  margin-bottom: 0.5rem;
+}
+
+.prace .pracebox .popip {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .projets .prace {
+    flex-wrap: wrap; /* Zabalit obsah na menších obrazovkách */
+  }
+
+  .prace .pracebox {
+    flex: 1 1 100%; /* Každý box na samostatném řádku */
+    max-width: 100%;
+  }
+}
+
