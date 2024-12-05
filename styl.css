@@ -402,6 +402,8 @@ footer ul li a {
   gap: 1rem; /* Mezera mezi boxy */
   width: 100%;
   overflow-x: auto; /* Zajistí posun, pokud nebude dost místa */
+  overflow: hidden;
+
 }
 
 .prace .pracebox {

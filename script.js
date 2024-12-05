@@ -129,6 +129,18 @@ gsap.from(".socials a", {
 
 
 
+gsap.from(".pracebox", {
+  y: 50, 
+  opacity: 0, 
+  duration: 1, 
+  ease: "power1.out", 
+  scrollTrigger: {
+    trigger: ".prace", 
+    start: "top 80%",
+    toggleActions: "play none none none", 
+  },
+ 
+});
 
 
 
