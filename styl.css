@@ -428,13 +428,15 @@ footer ul li a {
 
 /* Responzivita */
 @media (max-width: 768px) {
-  .projets .prace {
-    flex-wrap: wrap; /* Zabalit obsah na menších obrazovkách */
+  .projekty .prace {
+    flex-direction: column; 
   }
 
   .prace .pracebox {
-    flex: 1 1 100%; /* Každý box na samostatném řádku */
+    flex: 0 0 auto; 
+    width: 100%;    
     max-width: 100%;
   }
 }
+
 
