@@ -138,6 +138,40 @@ header {
 
 }
 
+.podnadpis {
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  position: relative;
+  text-align: center; 
+}
+
+.podnadpis::after {
+  content: '';
+  display: block;
+  width: 100%; 
+  height: 5px; 
+  background: linear-gradient(to right, #1e90ff, #00bfff, #87cefa, #4682b4);
+  background-size: 300% 100%; 
+  margin-top: 5px; 
+  border-radius: 3px; 
+  animation: animateUnderline 3s infinite linear; 
+}
+
+/* Definice animace */
+@keyframes animateUnderline {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 @media (max-width: 1200px) {
   .hero-container h1 {
@@ -397,24 +431,23 @@ footer ul li a {
 
 .projekty .prace {
   display: flex;
-  justify-content: space-between; /* Rovnoměrné rozmístění boxů */
-  flex-wrap: nowrap; /* Boxy nezabalit na větších obrazovkách */
-  gap: 1rem; /* Mezera mezi boxy */
-  width: 100%;
-  overflow-x: auto; /* Zajistí posun, pokud nebude dost místa */
+  justify-content: space-between; 
+  flex-wrap: nowrap; 
+  gap: 1rem; 
+  overflow-x: auto;
   overflow: hidden;
 
 }
 
 .prace .pracebox {
-  flex: 1 1 30%; /* Všechny boxy budou stejně široké */
+  flex: 1 1 30%; 
   max-width: 30%;
   border-radius: 8px;
   border: 1px solid #333;
   padding: 1rem;
   background-color: #1b1b1b;
   text-align: center;
-  box-sizing: border-box; /* Zahrnout padding do šířky */
+  box-sizing: border-box; 
 }
 
 .prace .pracebox .popis h3 {
@@ -427,6 +460,44 @@ footer ul li a {
   font-size: 0.9rem;
   color: #ddd;
 }
+
+.projekty .pracebox .btn-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.projekty .pracebox .btn-link h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease; 
+}
+
+.projekty .pracebox .btn-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  width: 100%;
+  height: 2px; 
+  background: linear-gradient(90deg, #1e90ff, #00bfff);
+  transition: all 0.3s ease; 
+}
+
+
+.projekty .pracebox .btn-link:hover h3 {
+  transform: scale(1.25); 
+}
+
+.projekty .pracebox .btn-link:hover::after {
+  transform: scaleX(1); 
+}
+
+
 
 /* Responzivita */
 @media (max-width: 768px) {

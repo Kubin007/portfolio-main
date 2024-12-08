@@ -127,7 +127,16 @@ gsap.from(".socials a", {
   }
 });
 
-
+gsap.from(".mojeprace", {
+  opacity: 0,
+  duration: 2,
+  ease: "power1.inOut",
+  scrollTrigger: {
+    trigger: ".prace", // Element, který spouští animaci
+    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
+    toggleActions: "play none none none" // Akce při scrollování
+  }
+});
 
 gsap.from(".pracebox", {
   y: 50, 
@@ -142,8 +151,16 @@ gsap.from(".pracebox", {
  
 });
 
-
-
+gsap.from(".kde", {
+  opacity: 0,
+  duration: 2,
+  ease: "power1.inOut",
+  scrollTrigger: {
+    trigger: ".prace", // Element, který spouští animaci
+    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
+    toggleActions: "play none none none" // Akce při scrollování
+  }
+});
 
 
 
