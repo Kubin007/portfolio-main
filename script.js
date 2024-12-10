@@ -17,9 +17,9 @@ gsap.from(".omne", {
   duration: 2,
   ease: "power1.inOut",
   scrollTrigger: {
-    trigger: ".omne", // Element, který spouští animaci
-    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
-    toggleActions: "play none none none" // Akce při scrollování
+    trigger: ".omne", 
+    start: "top 80%", 
+    toggleActions: "play none none none" 
   }
 });
 
@@ -45,24 +45,23 @@ gsap.from(".ja2", {
   }
 });
 
-// Zaregistruj ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-// Animace pro nadpis "praxe"
+
 gsap.from(".praxe", {
   opacity: 0,
-  y: -50, // Vznik shora
+  y: -50, 
   duration: 1,
   ease: "power1.out",
   scrollTrigger: {
-    trigger: ".praxe", // Spustí animaci, když se "praxe" objeví ve viewportu
+    trigger: ".praxe", 
     start: "top 80%",
   }
 });
 
-// Animace pro jednotlivé workboxy
+
 gsap.from(".workbox:nth-child(1)", {
-  x: -100, // Vyjede zleva
+  x: -100,
   opacity: 0,
   duration: 1,
   ease: "power1.out",
@@ -73,7 +72,7 @@ gsap.from(".workbox:nth-child(1)", {
 });
 
 gsap.from(".workbox:nth-child(2)", {
-  x: 100, // Vyjede zprava
+  x: 100, 
   opacity: 0,
   duration: 1,
   ease: "power1.out",
@@ -84,7 +83,7 @@ gsap.from(".workbox:nth-child(2)", {
 });
 
 gsap.from(".workbox:nth-child(3)", {
-  x: -100, // Vyjede zleva
+  x: -100, 
   opacity: 0,
   duration: 1,
   ease: "power1.out",
@@ -95,7 +94,7 @@ gsap.from(".workbox:nth-child(3)", {
 });
 
 gsap.from(".workbox:nth-child(4)", {
-  x: 100, // Vyjede zprava
+  x: 100, 
   opacity: 0,
   duration: 1,
   ease: "power1.out",
@@ -110,9 +109,9 @@ gsap.from(".kontakt", {
   duration: 2,
   ease: "power1.inOut",
   scrollTrigger: {
-    trigger: ".kontakt", // Element, který spouští animaci
-    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
-    toggleActions: "play none none none" // Akce při scrollování
+    trigger: ".kontakt", 
+    start: "top 80%",
+    toggleActions: "play none none none" 
   }
 });
 
@@ -132,9 +131,9 @@ gsap.from(".mojeprace", {
   duration: 2,
   ease: "power1.inOut",
   scrollTrigger: {
-    trigger: ".prace", // Element, který spouští animaci
-    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
-    toggleActions: "play none none none" // Akce při scrollování
+    trigger: ".prace", 
+    start: "top 80%", 
+    toggleActions: "play none none none" 
   }
 });
 
@@ -156,9 +155,9 @@ gsap.from(".kde", {
   duration: 2,
   ease: "power1.inOut",
   scrollTrigger: {
-    trigger: ".prace", // Element, který spouští animaci
-    start: "top 80%", // Kdy animace začne (pozice prvku a viewportu)
-    toggleActions: "play none none none" // Akce při scrollování
+    trigger: ".prace", 
+    start: "top 80%",
+    toggleActions: "play none none none" 
   }
 });
 
